@@ -1,0 +1,4 @@
+Latitude: -6.3117976, Longitude: 106.9040558, Maps: http://maps.google.com/maps?z=12&t=m&q=loc:-6.3117976+106.9040558
+Latitude: -6.3117974, Longitude: 106.9040549, Maps: http://maps.google.com/maps?z=12&t=m&q=loc:-6.3117974+106.9040549
+Latitude: -6.3118013, Longitude: 106.9040573, Maps: http://maps.google.com/maps?z=12&t=m&q=loc:-6.3118013+106.9040573
+Latitude: -6.3118013, Longitude: 106.9040573, Maps: http://maps.google.com/maps?z=12&t=m&q=loc:-6.3118013+106.9040573
