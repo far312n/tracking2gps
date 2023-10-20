@@ -86,7 +86,7 @@ app.post('/server', (req, res) => {
   });
 });
 
-port == process.env.port || port
+port = process.env.PORT || port;
 
 app.listen(port, () => {
   console.log(`Server running on port ${port}`);
