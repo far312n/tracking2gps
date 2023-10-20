@@ -9,14 +9,13 @@ const bodyParser = require('body-parser');
 
 app.use(express.json());
 app.use(express.static('public'));
-
 // curl -i https://some-app.cyclic.app/myFile.txt
 app.get('*', async (req,res) => {
   let filename = req.path.slice(1)
 
   try {
     let s3File = await s3.getObject({
-      Service : process.env.SERVICES,
+      Bucket: process.env.BUCKET,
       Key: filename,
     }).promise()
 
@@ -42,7 +41,7 @@ app.put('*', async (req,res) => {
 
   await s3.putObject({
     Body: JSON.stringify(req.body),
-    Service: process.env.SERVICES,
+    Bucket: process.env.BUCKET,
     Key: filename,
   }).promise()
 
@@ -55,7 +54,7 @@ app.delete('*', async (req,res) => {
   let filename = req.path.slice(1)
 
   await s3.deleteObject({
-    Service: process.env.SERVICES,
+    Bucket: process.env.BUCKET,
     Key: filename,
   }).promise()
 
