@@ -16,7 +16,7 @@ app.get('*', async (req,res) => {
 
   try {
     let s3File = await s3.getObject({
-      Bucket: process.env.BUCKET,
+      Service : process.env.SERVICES,
       Key: filename,
     }).promise()
 
@@ -42,7 +42,7 @@ app.put('*', async (req,res) => {
 
   await s3.putObject({
     Body: JSON.stringify(req.body),
-    Bucket: process.env.BUCKET,
+    Service: process.env.SERVICES,
     Key: filename,
   }).promise()
 
@@ -55,7 +55,7 @@ app.delete('*', async (req,res) => {
   let filename = req.path.slice(1)
 
   await s3.deleteObject({
-    Bucket: process.env.BUCKET,
+    Service: process.env.SERVICES,
     Key: filename,
   }).promise()
 
